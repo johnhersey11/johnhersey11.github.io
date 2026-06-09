@@ -78,6 +78,12 @@
   .transition-item .trans-text strong{ color:var(--bone); font-weight:500; }
   .visual-moment{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--cool); margin-top:7px; line-height:1.5; }
 
+  .viz-header h3.cool{ color:var(--cool); }
+  .pipeline .pipe-lede{ font-size:clamp(15px,1.6vw,17.5px); line-height:1.62; color:#c9c6bd; max-width:74ch; margin-bottom:14px; }
+  .pipeline .pipe-spec{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; line-height:2.05; color:#c9c6bd; border-left:1px solid var(--line); padding-left:22px; margin-top:22px; }
+  .pipeline .pipe-spec .s-k{ color:var(--cool); }
+  .pipeline .pipe-spec .s-t{ color:var(--bone); }
+
   .footer-note{ border-top:1px solid var(--line); font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--dim); text-align:center; padding:26px 0 8px; margin-top:14px; line-height:1.7; }
   .footer-note a{ color:var(--bone); border-bottom:1px solid var(--line); text-decoration:none; padding-bottom:2px; }
   .footer-note a:hover{ border-color:var(--heat); }
@@ -107,6 +113,18 @@
   <div class="player-hint">&#9654; play &middot; click the timeline or charts to jump</div>
 
   <div id="content"></div>
+
+  <div class="viz-panel pipeline">
+    <div class="viz-header"><h3 class="cool">From Profile to Scene</h3></div>
+    <p class="pipe-lede">This profile isn&rsquo;t just a readout &mdash; it&rsquo;s the blueprint. Continuum reads the deconstruction profile and its emotional shape, then builds a generative node system in TouchDesigner to match. What&rsquo;s in the track &mdash; its elements, its energy, its feeling &mdash; decides what gets built.</p>
+    <p class="pipe-lede">Then the parameters above drive it live. Energy, tension, hypnotic depth and the rest are mapped onto real TouchDesigner parameters &mdash; particle density, camera motion, light intensity, color. The model chooses that mapping and writes it straight into the running operator network over MCP. A signal goes in, a feeling comes out, and the feeling drives the light.</p>
+    <div class="pipe-spec">
+      <div><span class="s-k">profile + emotion</span> &rarr; <span class="s-t">node system authored in TouchDesigner</span></div>
+      <div><span class="s-k">emotion parameters</span> &rarr; live scene parameters (particles &middot; camera &middot; light &middot; color)</div>
+      <div><span class="s-k">mapping</span> &rarr; chosen by the model, not hand-wired</div>
+      <div><span class="s-k">execution</span> &rarr; written into the live operator network over MCP</div>
+    </div>
+  </div>
 
   <div class="footer-note" id="footerNote"></div>
 </div>

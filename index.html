@@ -227,6 +227,7 @@ p.body{color:#c9c6bd;max-width:64ch;margin-top:16px}
         <p class="lede">Software that listens to live music, reads its emotional and thematic shape in real time, and turns it into generative visuals and lighting.</p>
         <p class="body">The visual at the top of this page is the idea in miniature: a signal goes in, a feeling comes out, and the feeling drives the light. At full scale, Continuum does this for live venues — a real-time emotion model listening alongside the crowd.</p>
         <div class="bridge"><b>Built with AI as the collaborator.</b> The codebase written with Claude Code. The research — music-emotion recognition, model architectures — run with agents. A larger model distilled into a small local one fast enough to keep up live on stage. Agents handle the work; I focus on taste and direction.</div>
+        <p class="body" style="margin-top:22px;"><a href="get-down.html" target="_blank" rel="noopener" style="color:var(--heat);border-bottom:1px solid rgba(255,77,46,.45);text-decoration:none;">See an example of one part of the analysis here &rarr;</a></p>
       </div>
       <div class="spec">
         <div><span class="s-k">input</span> &nbsp;live audio, any source</div>
@@ -237,44 +238,6 @@ p.body{color:#c9c6bd;max-width:64ch;margin-top:16px}
         <div><span class="s-k">output</span> &nbsp;TouchDesigner / OSC → visuals &amp; lighting</div>
         <div><span class="s-k">built by</span> &nbsp;one person + agents</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTINUUM ASSETS ============
-  CLAUDE CODE — FILL THIS SECTION:
-  Replace the two .asset placeholders below with real Continuum output.
-  - For images/renders: <img class="asset-media" src="..." alt="...">
-    (compress to <300KB each; webp or jpg; keep total page under ~1.5MB)
-  - For video/screen captures: <video class="asset-media" autoplay loop muted playsinline src="..."></video>
-    (mp4/h264, <4MB, no audio track; muted+playsinline required for mobile autoplay)
-  - Update each .asset-cap with a one-line plain-language caption:
-    what the viewer is looking at + what drove it (e.g. "Emotion curve from a live
-    set driving particle density in TouchDesigner").
-  - Two assets max. If only one is strong, delete the second .asset figure;
-    the grid collapses to a single full-width slot automatically.
-  - Do not add new sections, headings, fonts, or colors. Keep it quiet.
--->
-<section id="output" style="padding-top:0">
-  <div class="wrap">
-    <div class="eyebrow cool">From the System</div>
-    <style>
-      .asset-link{aspect-ratio:16/9;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:9px;padding:26px;text-decoration:none;transition:border-color .2s,transform .2s,background .2s}
-      .asset-link:hover{border-color:var(--heat);transform:translateY(-2px);background:#191921}
-      .al-kicker{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
-      .al-title{font-family:'Anton',sans-serif;font-size:clamp(30px,4.5vw,52px);line-height:.92;text-transform:uppercase;color:var(--bone)}
-      .al-go{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--cool)}
-      .asset-link:hover .al-go{color:var(--heat)}
-    </style>
-    <div class="asset-grid">
-      <figure class="asset">
-        <a class="asset-media asset-link" href="get-down.html" target="_blank" rel="noopener">
-          <span class="al-kicker">Interactive Breakdown</span>
-          <span class="al-title">Get Down</span>
-          <span class="al-go">Play the track · scrub the analysis ↗</span>
-        </a>
-        <figcaption class="asset-cap">What Continuum reads from one track — Burnski &amp; Kepler, &ldquo;Get Down&rdquo;: section structure, four-band energy, and the 15-dimension emotion/visual curves that drive the lighting. Open it, press play, and click anywhere on the timeline to follow the analysis.</figcaption>
-      </figure>
     </div>
   </div>
 </section>

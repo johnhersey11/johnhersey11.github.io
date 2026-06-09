@@ -281,7 +281,7 @@ p.body{color:#c9c6bd;max-width:64ch;margin-top:16px}
     else if (phase < .7){ e=.92; v=.78; tn=.4; d=.42; }                   // drop
     else if (phase < .85){ const p=(phase-.7)/.15; e=.9-p*.6; v=.7-p*.25; tn=.3; d=.5+p*.3; }   // breakdown
     else { const p=(phase-.85)/.15; e=.3+p*.5; v=.5; tn=.4+p*.4; d=.7; }  // rebuild
-    const wob = Math.sin(t*1.7)*.04 + Math.sin(t*.43)*.03;
+    const wob = Math.sin(t*.9)*.03 + Math.sin(t*.35)*.025;
     target.energy = clamp(e+wob); target.valence = clamp(v+wob*.5);
     target.tension = clamp(tn-wob); target.depth = clamp(d);
   }
@@ -310,14 +310,14 @@ p.body{color:#c9c6bd;max-width:64ch;margin-top:16px}
 
   function draw(now){
     // ease emotion toward target
-    const ease = .03;
+    const ease = .022;
     for (const k in emo) emo[k] += (target[k]-emo[k])*ease;
 
     ctx.clearRect(0,0,W,H);
     const t = now/1000;
     const cx = W/2;
-    const amp = (H*.16) * (0.35 + emo.energy*1.25);
-    const speed = .25 + emo.energy*1.4;
+    const amp = (H*.16) * (0.4 + emo.energy*1.0);
+    const speed = .14 + emo.energy*0.6;
     const jag = emo.tension;       // tension adds higher-freq detail
     const spread = .35 + emo.depth*.65;
 
@@ -332,8 +332,8 @@ p.body{color:#c9c6bd;max-width:64ch;margin-top:16px}
         const env = Math.sin(u*Math.PI);  // pinch at edges
         let y = yBase
           + Math.sin(u*4.5 + t*speed + phase) * amp * env * (1-fr*.4)
-          + Math.sin(u*11 + t*speed*1.7 + phase*2) * amp*.35*jag * env
-          + Math.sin(u*23 - t*speed*2.3 + phase*3) * amp*.12*jag * env;
+          + Math.sin(u*11 + t*speed*1.35 + phase*2) * amp*.24*jag * env
+          + Math.sin(u*23 - t*speed*1.5 + phase*3) * amp*.06*jag * env;
         if (x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
       }
       const colorT = clamp01(emo.valence*.85 + Math.sin(fr*6+t*.5)*.1);
@@ -351,7 +351,7 @@ p.body{color:#c9c6bd;max-width:64ch;margin-top:16px}
       const u=x/W, env=Math.sin(u*Math.PI);
       const y = H*.5
         + Math.sin(u*4.5 + t*speed) * amp * env
-        + Math.sin(u*11 + t*speed*1.7) * amp*.4*jag*env;
+        + Math.sin(u*11 + t*speed*1.35) * amp*.26*jag*env;
       if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
     }
     ctx.strokeStyle = mix(cool, heat, emo.valence);

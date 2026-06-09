@@ -102,6 +102,18 @@
     <div class="meta" id="mhMeta"></div>
   </div>
 
+  <div class="viz-panel pipeline">
+    <div class="viz-header"><h3 class="cool">From Profile to Scene</h3></div>
+    <p class="pipe-lede">This profile isn&rsquo;t just a readout &mdash; it&rsquo;s the blueprint. Continuum reads the deconstruction profile and its emotional shape, then builds a generative node system in TouchDesigner to match. What&rsquo;s in the track &mdash; its elements, its energy, its feeling &mdash; decides what gets built.</p>
+    <p class="pipe-lede">Then the emotional parameters drive it live. Energy, tension, hypnotic depth and the rest are mapped onto real TouchDesigner parameters &mdash; particle density, camera motion, light intensity, color. The model chooses that mapping and writes it straight into the running operator network over MCP. A signal goes in, a feeling comes out, and the feeling drives the light.</p>
+    <div class="pipe-spec">
+      <div><span class="s-k">profile + emotion</span> &rarr; <span class="s-t">node system authored in TouchDesigner</span></div>
+      <div><span class="s-k">emotion parameters</span> &rarr; live scene parameters (particles &middot; camera &middot; light &middot; color)</div>
+      <div><span class="s-k">mapping</span> &rarr; chosen by the model, not hand-wired</div>
+      <div><span class="s-k">execution</span> &rarr; written into the live operator network over MCP</div>
+    </div>
+  </div>
+
   <div id="trackInfo"></div>
 
   <div class="player-bar" id="playerBar">
@@ -114,18 +126,6 @@
   <div class="player-hint">&#9654; play &middot; click the timeline or charts to jump</div>
 
   <div id="content"></div>
-
-  <div class="viz-panel pipeline">
-    <div class="viz-header"><h3 class="cool">From Profile to Scene</h3></div>
-    <p class="pipe-lede">This profile isn&rsquo;t just a readout &mdash; it&rsquo;s the blueprint. Continuum reads the deconstruction profile and its emotional shape, then builds a generative node system in TouchDesigner to match. What&rsquo;s in the track &mdash; its elements, its energy, its feeling &mdash; decides what gets built.</p>
-    <p class="pipe-lede">Then the parameters above drive it live. Energy, tension, hypnotic depth and the rest are mapped onto real TouchDesigner parameters &mdash; particle density, camera motion, light intensity, color. The model chooses that mapping and writes it straight into the running operator network over MCP. A signal goes in, a feeling comes out, and the feeling drives the light.</p>
-    <div class="pipe-spec">
-      <div><span class="s-k">profile + emotion</span> &rarr; <span class="s-t">node system authored in TouchDesigner</span></div>
-      <div><span class="s-k">emotion parameters</span> &rarr; live scene parameters (particles &middot; camera &middot; light &middot; color)</div>
-      <div><span class="s-k">mapping</span> &rarr; chosen by the model, not hand-wired</div>
-      <div><span class="s-k">execution</span> &rarr; written into the live operator network over MCP</div>
-    </div>
-  </div>
 
   <div class="footer-note" id="footerNote"></div>
 </div>
